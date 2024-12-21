@@ -24,7 +24,7 @@ while choice != "0":
 
     if choice == "1":
         enter = int(input("Ilość punktów do przeznaczenia: "))
-        if enter > points and enter <= 0:
+        if enter > points or enter <= 0:
             print("Nie możesz przeznaczyć takiej ilości puntków")
 
         else:
