@@ -120,33 +120,42 @@ def human_move(board,human):
 def computer_move(board,computer,human):
     """Spowoduj wykonanie ruchu przez komputer."""
     # utwórz kopię roboczą, ponieważ funkcja będzie zmieniać listę
-    board = board[:]
-    # najlepsze pozycje do zajęcia według kolejności
-    BEST_MOVES = (4, 0, 2, 6, 8, 1, 3, 5, 7)
-    print("Wybieram pole numer", end=" ")
-    # jeśli komputer może wygrać, wykonaj ten ruch
-    for move in legal_moves(board):
-        board[move] = computer
-        if winner(board) == computer:
-            print(move)
-            return move
-        # ten ruch został sprawdzony, wycofaj go
-        board[move] = EMPTY
 
-    # jeśli człowiek może wygrać, zablokuj ten ruch
-    for move in legal_moves(board):
-        board[move] = human
-        if winner(board) == human:
-            print(move)
-            return move
-        # ten ruch został sprawdzony, wycofaj go
-        board[move] = EMPTY
+    if computer == X:
+        print("Wybieram pole numer", end=" ")
+        move = None
+        BEST_MOVES_1 = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+        BEST_MOVES_2 = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+        BEST_MOVES_3 = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+        BEST_MOVES_4 = (4, 0, 2, 6, 8, 1, 3, 5, 7)
 
-    # ponieważ nikt nie może wygrać w następnym ruchu, wybierz najlepsze wolne pole
-    for move in BEST_MOVES:
-        if move in legal_moves(board):
-            print(move)
-            return move
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
