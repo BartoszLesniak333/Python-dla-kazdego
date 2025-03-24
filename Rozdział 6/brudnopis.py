@@ -82,3 +82,7 @@ print("Po powrocie do zakresu globalnego wartość zmiennej value nadal wynosi:"
 change_global()
 print("Po powrocie do zakresu globalnego okazuje się, że wartość zmiennej value",
       "\nzmieniła się na:", value)
+
+def test(a,bc=100):
+    return a
+
